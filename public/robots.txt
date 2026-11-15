@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mocelindigital.agency.app.br/sitemap.xml

@@ -1,0 +1,138 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-numeric: "Outfit", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-obsidian: #060508;
+  --color-charcoal: #0F0D12;
+  --color-charcoal-elevated: #16121A;
+  --color-gold: #D4AF37;
+  --color-gold-light: #F3D36B;
+  --color-gold-dark: #A6831E;
+  --color-pink: #D61B70;
+  --color-pink-bright: #FF4D9D;
+  --color-ivory: #F5F2EB;
+  --color-stone: #B3ACB8;
+}
+
+@layer base {
+  html {
+    background-color: #FAF8F9;
+    color: #141018;
+    font-family: var(--font-sans);
+    scroll-padding-top: 5.5rem;
+  }
+
+  html.dark {
+    background-color: #060508;
+    color: #F5F2EB;
+  }
+
+  body {
+    overflow-x: hidden;
+    letter-spacing: 0.01em;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  *:focus-visible {
+    outline: 2px solid #D61B70;
+    outline-offset: 2px;
+  }
+
+  html.dark *:focus-visible {
+    outline: 2px solid #FF4D9D;
+  }
+}
+
+.gold-metallic-text {
+  background: linear-gradient(135deg, #8A6407 0%, #B8860B 50%, #735104 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+html.dark .gold-metallic-text {
+  background: linear-gradient(135deg, #F8E59E 0%, #D4AF37 48%, #B8860B 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gold-metallic-bg {
+  background: linear-gradient(135deg, #F3D36B 0%, #D4AF37 55%, #B8860B 100%);
+}
+
+.pink-cta-bg {
+  background: linear-gradient(135deg, #E61E7A 0%, #C21462 100%);
+}
+
+.font-numeric {
+  font-family: var(--font-numeric);
+  font-variant-numeric: lining-nums tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.tabular-nums {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.surface-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(20, 16, 24, 0.1);
+  box-shadow: 0 12px 32px -18px rgba(20, 16, 24, 0.12);
+}
+
+html.dark .surface-card {
+  background-color: #0F0D12;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: none;
+}
+
+.surface-card-featured {
+  background: linear-gradient(180deg, #FFF7FA 0%, #FFFFFF 100%);
+  border: 1px solid rgba(194, 20, 98, 0.35);
+  box-shadow: 0 16px 36px -18px rgba(230, 30, 122, 0.2), 0 0 0 1px rgba(184, 134, 11, 0.22);
+}
+
+html.dark .surface-card-featured {
+  background: linear-gradient(180deg, #170F18 0%, #110D13 100%);
+  border: 1px solid rgba(230, 30, 122, 0.45);
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.2);
+}
+
+@keyframes whatsapp-shine-sweep {
+  0% {
+    transform: translateX(0%) skewX(-22deg);
+    opacity: 0;
+  }
+  4% {
+    opacity: 0.9;
+  }
+  18% {
+    opacity: 0.9;
+  }
+  24% {
+    transform: translateX(350%) skewX(-22deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(350%) skewX(-22deg);
+    opacity: 0;
+  }
+}
+
+.whatsapp-shine-effect {
+  animation: whatsapp-shine-sweep 5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-shine-effect {
+    animation: none;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Mocelin Digital Agency",
+  "description": "Agência digital em Porto Alegre especializada na criação de sites profissionais, logotipos, identidades visuais e perfis estratégicos para Instagram.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
