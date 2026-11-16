@@ -1,4 +1,4 @@
-import { Sun, Moon } from 'lucide-react';
+import { Sun, Moon, Instagram, ArrowUpRight } from 'lucide-react';
 import {
   INSTAGRAM_HANDLE,
   INSTAGRAM_URL,
@@ -58,24 +58,39 @@ export function Footer() {
               ))}
             </nav>
 
-            <button
-              type="button"
-              onClick={toggleTheme}
-              aria-label={theme === 'dark' ? t.themeToLight : t.themeToDark}
-              className="inline-flex items-center gap-1.5 rounded-lg border border-[#141018]/15 dark:border-white/15 bg-white dark:bg-[#0F0D12] px-3 py-1.5 text-xs font-medium text-[#141018] dark:text-[#F5F2EB] hover:border-[#C21462] dark:hover:border-[#FF4D9D] transition-colors whitespace-nowrap"
-            >
-              {theme === 'dark' ? (
-                <>
-                  <Sun className="w-3.5 h-3.5 text-[#F3D36B]" aria-hidden="true" />
-                  <span>{t.themeLightLabel}</span>
-                </>
-              ) : (
-                <>
-                  <Moon className="w-3.5 h-3.5 text-[#C21462]" aria-hidden="true" />
-                  <span>{t.themeDarkLabel}</span>
-                </>
-              )}
-            </button>
+            <div className="flex flex-wrap items-center gap-3">
+              {/* Social Media Section */}
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Instagram ${INSTAGRAM_HANDLE}`}
+                className="inline-flex items-center gap-2 rounded-lg border border-[#E61E7A]/35 bg-white dark:bg-[#0F0D12] px-3 py-1.5 text-xs font-medium text-[#141018] dark:text-[#F5F2EB] hover:border-[#C21462] dark:hover:border-[#FF4D9D] hover:text-[#C21462] dark:hover:text-[#FF4D9D] transition-colors whitespace-nowrap"
+              >
+                <Instagram className="w-3.5 h-3.5 text-[#C21462] dark:text-[#FF4D9D] shrink-0" aria-hidden="true" />
+                <span>{INSTAGRAM_HANDLE}</span>
+                <ArrowUpRight className="w-3.5 h-3.5 opacity-70 shrink-0" aria-hidden="true" />
+              </a>
+
+              <button
+                type="button"
+                onClick={toggleTheme}
+                aria-label={theme === 'dark' ? t.themeToLight : t.themeToDark}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-[#141018]/15 dark:border-white/15 bg-white dark:bg-[#0F0D12] px-3 py-1.5 text-xs font-medium text-[#141018] dark:text-[#F5F2EB] hover:border-[#C21462] dark:hover:border-[#FF4D9D] transition-colors whitespace-nowrap"
+              >
+                {theme === 'dark' ? (
+                  <>
+                    <Sun className="w-3.5 h-3.5 text-[#F3D36B]" aria-hidden="true" />
+                    <span>{t.themeLightLabel}</span>
+                  </>
+                ) : (
+                  <>
+                    <Moon className="w-3.5 h-3.5 text-[#C21462]" aria-hidden="true" />
+                    <span>{t.themeDarkLabel}</span>
+                  </>
+                )}
+              </button>
+            </div>
           </div>
         </div>
 

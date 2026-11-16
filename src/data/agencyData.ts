@@ -13,8 +13,8 @@ export const SITE_DOMAIN = 'mocelindigital.agency.app.br';
 export const SITE_URL = `https://${SITE_DOMAIN}`;
 export const WHATSAPP_NUMBER = '5551980269868';
 export const WHATSAPP_DISPLAY = '(51) 98026-9868';
-export const INSTAGRAM_URL = 'https://www.instagram.com/mocelin.digital.agency/';
-export const INSTAGRAM_HANDLE = '@mocelin.digital.agency';
+export const INSTAGRAM_URL = 'https://www.instagram.com/mocelindigital.agency/';
+export const INSTAGRAM_HANDLE = '@mocelindigital.agency';
 
 export const PRIMARY_WHATSAPP_MESSAGE =
   'Tenho interesse em criar um site profissional para minha empresa e gostaria de conhecer as opções e solicitar um orçamento personalizado! 🚀';
